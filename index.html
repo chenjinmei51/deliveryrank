@@ -16,15 +16,15 @@
     <nav class="navbar">
         <div class="logo"><img src="/images/LOGO.png" alt="LOGO"></div>
         <ul class="menu">
-            <li onclick="toggleDropdown(this)">Meal Delivery-Reviews ▼
+            <li onclick="toggleDropdown(this)" class="menu-item">Meal Delivery-Reviews ▼
                 <ul class="dropdown">
-                    <li onclick="toggleDropdown(this)">Meal Reviews
+                    <li onclick="toggleDropdown(this)" class="menu-item">Meal Reviews
                         <ul>
                             <li>Meal Reviews 1234</li>
                             <li>Meal Reviews 5678</li>
                         </ul>
                     </li>
-                    <li onclick="toggleDropdown(this)">Best Meal Delivery per Location
+                    <li onclick="toggleDropdown(this)" class="menu-item">Best Meal Delivery per Location
                         <ul>
                             <li>Best Meal per 1234</li>
                             <li>Best Meal per 5678</li>
@@ -32,15 +32,15 @@
                     </li>
                 </ul>
             </li>
-            <li onclick="toggleDropdown(this)">Pork Delivery-Reviews ▼
+            <li onclick="toggleDropdown(this)" class="menu-item">Pork Delivery-Reviews ▼
                 <ul class="dropdown">
-                    <li onclick="toggleDropdown(this)">Pork Reviews
+                    <li onclick="toggleDropdown(this)" class="menu-item">Pork Reviews
                         <ul>
                             <li>Reviews 1234</li>
                             <li>Reviews 5678</li>
                         </ul>
                     </li>
-                    <li onclick="toggleDropdown(this)">Best Pork Delivery per Location
+                    <li onclick="toggleDropdown(this)" class="menu-item">Best Pork Delivery per Location
                         <ul>
                             <li>Best Pork per 1234</li>
                             <li>Best Pork per 5678</li>
@@ -48,15 +48,15 @@
                     </li>
                 </ul>
             </li>
-            <li onclick="toggleDropdown(this)">Game Delivery-Reviews ▼
+            <li onclick="toggleDropdown(this)" class="menu-item">Game Delivery-Reviews ▼
                 <ul class="dropdown">
-                    <li onclick="toggleDropdown(this)">Game Reviews
+                    <li onclick="toggleDropdown(this)" class="menu-item">Game Reviews
                         <ul>
                             <li>Game Reviews 1234</li>
                             <li>Game Reviews 5678</li>
                         </ul>
                     </li>
-                    <li onclick="toggleDropdown(this)">Best Game Delivery per Location
+                    <li onclick="toggleDropdown(this)" class="menu-item">Best Game Delivery per Location
                         <ul>
                             <li>Best Game per 1234</li>
                             <li>Best Game per 5678</li>
@@ -99,17 +99,19 @@
     <!-- JavaScript for Dropdown Menu Handling -->
     <script>
         function toggleDropdown(element) {
+            element.classList.toggle('active');
             const dropdown = element.querySelector('.dropdown');
             if (dropdown) {
                 dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
             }
         }
-        
+
         document.addEventListener('click', function(event) {
             const target = event.target;
-            const menus = document.querySelectorAll('.menu > li');
+            const menus = document.querySelectorAll('.menu > li, .dropdown > li');
             menus.forEach(menu => {
                 if (!menu.contains(target)) {
+                    menu.classList.remove('active');
                     const dropdown = menu.querySelector('.dropdown');
                     if (dropdown) {
                         dropdown.style.display = 'none';
