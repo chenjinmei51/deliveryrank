@@ -2,123 +2,92 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discover & Compare Top-Rated Delivery Services</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Advertising Disclosure -->
-    <div class="advertising-disclosure">
+    <div class="disclosure">
         We rank vendors based on rigorous testing and research, but also take into account your feedback and our commercial agreements with providers. This page contains affiliate links. Advertising Disclosure.
     </div>
 
     <!-- Navigation Bar -->
     <nav class="navbar">
-        <div class="logo"><img src="/images/LOGO.png" alt="LOGO"></div>
-        <ul class="menu">
-            <li onclick="toggleDropdown(this)" class="menu-item">Meal Delivery-Reviews ▼
-                <ul class="dropdown">
-                    <li onclick="toggleDropdown(this)" class="menu-item">Meal Reviews
-                        <ul>
-                            <li>Meal Reviews 1234</li>
-                            <li>Meal Reviews 5678</li>
-                        </ul>
-                    </li>
-                    <li onclick="toggleDropdown(this)" class="menu-item">Best Meal Delivery per Location
-                        <ul>
-                            <li>Best Meal per 1234</li>
-                            <li>Best Meal per 5678</li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li onclick="toggleDropdown(this)" class="menu-item">Pork Delivery-Reviews ▼
-                <ul class="dropdown">
-                    <li onclick="toggleDropdown(this)" class="menu-item">Pork Reviews
-                        <ul>
-                            <li>Reviews 1234</li>
-                            <li>Reviews 5678</li>
-                        </ul>
-                    </li>
-                    <li onclick="toggleDropdown(this)" class="menu-item">Best Pork Delivery per Location
-                        <ul>
-                            <li>Best Pork per 1234</li>
-                            <li>Best Pork per 5678</li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li onclick="toggleDropdown(this)" class="menu-item">Game Delivery-Reviews ▼
-                <ul class="dropdown">
-                    <li onclick="toggleDropdown(this)" class="menu-item">Game Reviews
-                        <ul>
-                            <li>Game Reviews 1234</li>
-                            <li>Game Reviews 5678</li>
-                        </ul>
-                    </li>
-                    <li onclick="toggleDropdown(this)" class="menu-item">Best Game Delivery per Location
-                        <ul>
-                            <li>Best Game per 1234</li>
-                            <li>Best Game per 5678</li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
+        <div class="logo"><img src="/images/LOGO.png" alt="Logo"></div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#">Meal Delivery-Reviews</a></li>
+            <li><a href="#">Pork Delivery-Reviews</a></li>
+            <li><a href="#">Game Delivery-Reviews</a></li>
         </ul>
     </nav>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <h1>Discover & Compare Top-Rated Delivery Services</h1>
-            <div class="hero-content">
-                <div class="hero-text">
-                    <p>Find the Best Meal Delivery Service</p>
-                    <p>Looking for the perfect meal delivery service? We’ve got you covered! From meal kits to ready-made meals, find affordable options tailored to your lifestyle. Whether you're keto, vegan, gluten-free, or low-carb, discover services that meet your dietary needs. Read in-depth reviews and compare plans to make the best possible choice.</p>
-                    <button>Read Our Reviews</button>
-                    <button>Explore Our Blog</button>
-                </div>
-                <div class="hero-image">
-                    <img src="HHH.png" alt="Hero Image">
-                </div>
-            </div>
-        </section>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Discover & Compare Top-Rated Delivery Services</h1>
+        <div class="hero-tabs">
+            <button class="hero-tab active" data-target="meal">Meal Delivery</button>
+            <button class="hero-tab" data-target="pork">Pork Delivery</button>
+            <button class="hero-tab" data-target="game">Game Delivery</button>
+        </div>
+        <div id="meal" class="hero-content active">
+            <p>This is Meal Delivery Content</p>
+            <img src="/images/meal.png" alt="Meal Delivery">
+            <p>Description about Meal Delivery.</p>
+        </div>
+        <div id="pork" class="hero-content">
+            <p>This is Pork Delivery Content</p>
+            <img src="/images/pork.png" alt="Pork Delivery">
+            <p>Description about Pork Delivery.</p>
+        </div>
+        <div id="game" class="hero-content">
+            <p>This is Game Delivery Content</p>
+            <img src="/images/game.png" alt="Game Delivery">
+            <p>Description about Game Delivery.</p>
+        </div>
+    </section>
 
-        <!-- Section Area -->
-        <section class="section">
-            <img src="Meal Delivery.png" alt="Meal Delivery">
-        </section>
-    </main>
+    <!-- Meal Delivery Section -->
+    <section class="meal-section">
+        <h2>Meal Delivery</h2>
+        <div class="main-article">
+            <img src="/images/3-1.png" alt="Best Meal Delivery">
+            <div>
+                <h3>10 Best Meal Delivery Services 2025: Expert Ranked</h3>
+                <p>Updated on 03.18.2025</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+        <div class="sub-articles">
+            <div>
+                <img src="/images/3-2.png" alt="Easy-To-Cook Meal Delivery">
+                <h3>10 Best Easy-To-Cook Meal Delivery Services 2025</h3>
+                <p>Updated on 03.18.2025</p>
+            </div>
+            <div>
+                <img src="/images/3-3.png" alt="High Protein Meal Delivery">
+                <h3>10 Best High Protein Meal Delivery Services in 2025</h3>
+                <p>Updated on 03.18.2025</p>
+            </div>
+            <div>
+                <img src="/images/3-4.png" alt="Anti-Inflammatory Meal Delivery">
+                <h3>10 Best Anti-Inflammatory Meal Delivery Services 2025</h3>
+                <p>Updated on 03.18.2025</p>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Delivery Reviews. All rights reserved.</p>
+        <p>© 2025 Your Website. All rights reserved.</p>
     </footer>
 
-    <!-- JavaScript for Dropdown Menu Handling -->
-    <script>
-        function toggleDropdown(element) {
-            element.classList.toggle('active');
-            const dropdown = element.querySelector('.dropdown');
-            if (dropdown) {
-                dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
-            }
-        }
-
-        document.addEventListener('click', function(event) {
-            const target = event.target;
-            const menus = document.querySelectorAll('.menu > li, .dropdown > li');
-            menus.forEach(menu => {
-                if (!menu.contains(target)) {
-                    menu.classList.remove('active');
-                    const dropdown = menu.querySelector('.dropdown');
-                    if (dropdown) {
-                        dropdown.style.display = 'none';
-                    }
-                }
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
