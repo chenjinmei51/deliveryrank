@@ -1,3 +1,5 @@
+  <!-- JavaScript -->
+<script>
 document.addEventListener('DOMContentLoaded', () => {
     const heroTabs = document.querySelectorAll('.hero-tab');
     const heroContents = document.querySelectorAll('.hero-content');
@@ -12,3 +14,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+</script>
